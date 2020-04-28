@@ -1,0 +1,94 @@
+/* sample spreadshet - you should replace all of this! */
+body {
+    margin: 100px;
+}
+
+header {
+    width: 100%;
+    /* background-color: coral; */
+}
+
+#heading {
+    /* background-color: gainsboro; */
+}
+
+#whatis {
+    width: 300px;
+    /* background-color: forestgreen; */
+    border: 10px solid orchid;
+}
+
+footer {
+    /* background-color: yellow; */
+}
+
+.form-input {
+
+  display: inline-block;
+}
+
+/* input[type=text]{
+  background-color: #f1f1f1;
+}
+
+input[name=participant]{
+  margin: 5px 0 10px 5px;
+  padding: 5px;
+  border: none;
+}
+input[name=temperature]{
+  margin: 5px 0 10px 0px;
+  padding: 5px;
+  border: none;
+}
+input[name=weather]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+}
+
+input[name=wind]{
+  margin: 5px 0 10px 5px;
+  padding: 5px;
+  border: none;
+}
+input[name=location]{
+  margin: 5px 0 10px 0px;
+  padding: 5px;
+  border: none;
+}
+input[name=height]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+}
+
+input[name=girth]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+}
+
+input[name=leaf_size]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+}
+
+input[name=leaf_shape]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+}
+
+input[name=bark_colour]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+}
+
+input[name=bark_texture]{
+  margin: 5px 0 10px 2px;
+  padding: 5px;
+  border: none;
+} */

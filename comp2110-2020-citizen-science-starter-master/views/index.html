@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Citizen Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="/static/js/main.js" type=module defer></script>
+  </head>
+  <body>
+
+    <header>
+      <div id="logo"></div>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#!/users">Users</a></li>
+              <li><a href="#!/observations">Observations</a></li>
+              <li><a href="#!/submit">Submit an observation</a></li>
+          </ul>
+      </nav>
+    </header>
+
+<script id ="form-template" type="text/x-handlebars-template">
+    <form id=form>
+      <div class "form-input">
+        <label for="participant">Participant</label>
+        <input type="text" name="participant">
+      </div>
+
+      <div class="form-input">
+        <label for "temperature">Temperature</label>
+        <input type="text" name="temperature">
+      </div>
+
+      <div class="form-input">
+        <label for="weather">Weather</label>
+        <input type="text" name="weather">
+      </div>
+
+      <div class="form-input">
+        <label for="wind">Wind</label>
+        <input type="text" name="wind">
+      </div>
+
+      <div class="form-input">
+        <label for="location">Location</label>
+        <input type="text" name="location">
+      </div>
+
+      <div class="form-input">
+        <label for="height">Height</label>
+        <input type="text" name="height">
+      </div>
+
+      <div class="form-input">
+        <label for="girth">Girth</label>
+        <input type="text" name="girth">
+      </div>
+
+      <div class="form-input">
+        <label for="leaf_size">Leaf Size</label>
+        <select name="leaf_size">
+          <option value="small" selected>Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">large</option>
+        </select>
+      </div>
+
+      <div class="form-input">
+        <label for="leaf_shape">Leaf Shape</label>
+        <input type="text" name="leaf_shape">
+      </div>
+
+      <div class="form-input">
+        <label for="bark_colour">Bark Colour</label>
+        <input type="text" name="bark_colour">
+      </div>
+
+      <div class="form-input">
+        <label for="bark_texture">Bark Texture</label>
+        <input type="text" name="bark_texture">
+      </div>
+
+      <div class="form-input">
+        <input type="submit">
+      </div>
+    </form>
+  </div>
+</script>
+
+    <div id="content">
+
+      <div id="heading">
+
+          <hgroup>
+              <h1>Citizen Science</h1>
+              <h2>Understanding Our Trees</h2>
+          </hgroup>
+
+          <div id="target"></div>
+
+
+
+
+
+  <footer>
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter"><a href="#">Twitter</a></li>
+        <li id="social-facebook"><a href="#">Facebook</a></li>
+        <li id="social-instagram"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110 Citizen Science 2020.</p>
+  </footer>
+
+
+  <!-- Templates -->
+
+  <script id="home-template" type="text/x-handlebars-template">
+    <h1>Recent Observations</h1>
+      <ul>
+        {{#each observation}}
+          <li class=observation-class data-id={{id}}><a href = "/#!/observations/{{id}}">{{timestamp}}  {{participant}}  {{location}}  {{temperature}}  {{weather}}</li>
+          {{/each}}
+      </ul>
+
+      </script>
+
+      <script id="home-user-template" type="text/x-handlebars-template">
+        <div id ="content"</div>
+      <h1>Users</h1>
+        <ul>
+          {{#each user}}
+            <li>{{first_name}} + {{last_name}} + {{email}} + <img src={{avatar}} alt="picture of {{first_name}}" height="65"></li>
+          {{/each}}
+        </ul>
+      </script>
+
+  <script id="users-template" type="text/x-handlebars-template">
+    <table>
+      <tr><th>id</th><th>firstname</th><th>lastname</th><th>email</th><th>avatar</th></tr>
+      {{#each user}}
+        <tr>
+          <th class=users-details data-id={{_id}}>{{id}}</th>
+          <th>{{first_name}} </th>
+          <th>{{last_name}}</th>
+          <th>{{email}}</th>
+          <th><img src={{avatar}} alt="picture of {{first_name}}" height="65"</th>
+          <th><a href = "/#!/users/{{id}}">{{first_name}} {{last_name}}</th>
+        </tr>
+      {{/each}}
+      </table>
+    </script>
+
+    <script id="observations-template" type="text/x-handlebars-template">
+      <table>
+        <tr><th>id</th><th>participant</th><th>timestamp</th><th>temperature</th><th>Weather</th><th>Wind</th><th>location</th><th>height</th><th>girth</th><th>leaf-size</th><th>leaf-shape</th><th>bark-colour</th><th>bark-texture</th></tr>
+      </table>
+        {{#each observation}}
+          <ul>
+            <li class=observation-class data-id={{id}}><a href = "/#!/observations/{{id}}">{{id}} {{participant}} {{timestamp}} {{temperature}}
+          {{weather}} {{wind}} {{location}} {{height}} {{girth}} {{leaf_size}} {{leaf_shape}} {{bark_colour}} {{bark_texture}} </li>
+
+            <!-- <li>{{participant}} </li>
+            <li>{{timestamp}}</li>
+            <li>{{temperature}}</li>
+            <li>{{weather}}</li>
+            <li>{{wind}}</li>
+            <li>{{location}}</li>
+            <li>{{height}}</li>
+            <li>{{girth}}</li>
+            <li>{{leaf_size}}</li>
+            <li>{{leaf_shape}}</li>
+            <li>{{bark_colour}}</li>
+            <li>{{bark_texture}}</li> -->
+          </ul>
+        {{/each}}
+      </script>
+
+    <script id="user-template" type="text/x-handlebars-template">
+   <table>
+     <th>{{id}}</th>
+     <th>{{first_name}} </th>
+     <th>{{last_name}}</th>
+     <th>{{email}}</th>
+     <th><img src={{avatar}} alt="picture of {{first_name}}" height="65"</th>
+      </tr>
+     </table>
+   </script>
+
+   <script id="observation-template" type="text/x-handlebars-template">
+     <table>
+       <th>{{participant}} </th>
+       <th>{{timestamp}}</th>
+       <th>{{temperature}}</th>
+       <th>{{weather}}</th>
+       <th>{{wind}}</th>
+       <th>{{location}}</th>
+       <th>{{height}}</th>
+       <th>{{girth}}</th>
+       <th>{{leaf_size}}</th>
+       <th>{{leaf_shape}}</th>
+       <th>{{bark_colour}}</th>
+       <th>{{bark_texture}}</th>
+     </table>
+   </script>
+  </body>
+
+  <div id ="space"</div>
+</html>
