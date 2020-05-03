@@ -1,0 +1,166 @@
+/* sample spreadshet - you should replace all of this! */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'27);
+nav {
+  flex:1;
+}
+
+header li {
+  float: left;
+  padding: 10px 20px;
+
+}
+
+
+
+#target li {
+  
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+
+
+}
+#target a {
+
+}
+#target{
+
+}
+
+
+header {
+  display: flex;
+  height: px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+nav a {
+
+  color: black;
+  text-align: center;
+  padding: 14px; 16px;
+  text-decoration: none;
+}
+
+.form-input {
+
+  display: inline-block;
+}
+
+#home-template {
+  text-decoration: none;
+
+}
+#form {
+
+}
+.form-input {
+
+  display:table;
+}
+
+ input[type=text]{
+  background-color: #f1f1f1;
+
+  border: none;
+}
+
+input[name=participant] {
+  margin: 5px 0 5px 12px;
+}
+
+input[name=temperature] {
+  margin: 5px 0 5px 5px;
+}
+
+input[name=weather]{
+  margin: 5px 0 5px 33px;
+}
+
+input[name=wind] {
+  margin: 5px 0 5px 50px;
+}
+
+input[name=location] {
+  margin: 5px 0 5px 28px;
+}
+
+input[name=height] {
+  margin: 5px 0 5px 41px;
+}
+
+input[name=girth] {
+  margin: 5px 0 5px 50px;
+}
+
+input[name=leaf_size] {
+  margin: 5px 0 5px 50px;
+}
+
+ul.footer-tos a{
+margin-top: 5px;
+font-weight: bold;
+padding: 5px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+
+}
+
+#social li{
+   display: inline-block;
+   text-align: center;
+   margin-right: 10px;
+   margin-top: 1%;
+   height: 30px;
+   width: 30px;
+}
+
+#social a{
+   font-size: 0;
+   padding-bottom: 30px;
+   outline: none;
+   padding: 50%;
+}
+li[id=social-twitter]{
+   background-image: url(https://aer.eu/wp-content/uploads/2017/06/twitter-logo-4.png);
+   opacity: 1.0;
+   background-size: cover;
+   background-size: 100% 100%;
+}
+li[id=social-facebook]{
+   background-image: url(https://www.facebook.com/images/fb_icon_325x325.png);
+   opacity: 1;
+   background-size: cover;
+   background-size: 100% 100%;
+
+}
+li[id=social-instagram]{
+   background-size: 100% 100%;
+   background-image: url(https://www.edigitalagency.com.au/wp-content/uploads/new-instagram-logo-png-transparent-light.png);
+   opacity: 1;
+   background-size: cover;
+
+}
+#copyright {
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+}
+
+footer  {
+  text-decoration: none;
+  padding-top: 30px;
+  text-align: center;
+
+  clear: both;
+
+}
